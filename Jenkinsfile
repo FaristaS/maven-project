@@ -1,8 +1,8 @@
-pipeline {
+ pipeline {
      agent any
      stages {
           stage('clone my SCM'){
-                    git checkout 'https://github.com/FaristaS/maven-project.git'
+                    git 'https://github.com/FaristaS/maven-project.git'
           }
           stage('compile with maven'){
                     step {
