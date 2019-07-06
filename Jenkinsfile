@@ -1,15 +1,71 @@
- pipeline {
-     agent any
-     stages {
-       stage('clone my SCM'){
-            git 'https://github.com/FaristaS/maven-project.git'
-			}
-       stage('compile with maven'){
-            steps {
-                withMaven(maven : 'MVN-3.5') {
-                    sh 'mvn compile'
-        }
-        }
-        }
-        }
-        }
+pipeline {
+
+
+
+agent any
+
+
+
+
+
+
+
+
+
+
+
+
+
+stages {
+
+
+
+stage('SCM Checkout'){
+
+
+
+git 'https://github.com/prakashk0301/maven-project'
+
+
+
+}
+
+
+
+}
+
+
+
+{
+
+
+
+stage ('Compile Stage') {
+
+
+
+
+
+
+
+
+steps {
+
+
+
+withMaven(maven : 'LocalMaven') {
+
+
+
+sh 'mvn clean compile'
+
+
+
+}
+}
+}
+
+}
+
+
+}
