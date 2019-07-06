@@ -53,7 +53,7 @@ steps {
 
 
 
-withMaven(maven : 'LocalMaven') {
+withMaven(maven : 'MVN-3.5') {
 
 
 
