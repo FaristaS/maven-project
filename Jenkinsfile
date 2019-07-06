@@ -23,15 +23,23 @@ sh 'mvn test'
 }
 
   
-stage ('Package Stage') {
+stage ('Test Stage') {
 steps {
 withMaven(maven : 'MVN-3.5') {
-sh 'mvn package'
+sh 'mvn test'
 }
 }
 }
   
+
   
+stage ('Install Stage') {
+steps {
+withMaven(maven : 'MVN-3.5') {
+sh 'mvn install'
+}
+}
+}
   
 }
 }
