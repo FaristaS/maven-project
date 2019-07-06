@@ -17,11 +17,19 @@ sh 'mvn clean compile'
 stage ('Test Stage') {
 steps {
 withMaven(maven : 'MVN-3.5') {
-sh 'mvn clean test'
+sh 'mvn test'
 }
 }
 }
+
   
+stage ('Package Stage') {
+steps {
+withMaven(maven : 'MVN-3.5') {
+sh 'mvn package'
+}
+}
+}
   
   
   
