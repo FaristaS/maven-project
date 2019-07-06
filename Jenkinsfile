@@ -21,17 +21,6 @@ sh 'mvn test'
 }
 }
 }
-
-  
-stage ('Test Stage') {
-steps {
-withMaven(maven : 'MVN-3.5') {
-sh 'mvn test'
-}
-}
-}
-  
-
   
 stage ('Install Stage') {
 steps {
