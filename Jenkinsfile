@@ -25,7 +25,7 @@ sh 'mvn test'
 stage ('Install Stage') {
 steps {
 withMaven(maven : 'MVN-3.5') {
-sh 'mvn install'
+sh 'mvn clean install'
 }
 }
 }
