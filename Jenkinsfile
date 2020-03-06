@@ -7,7 +7,7 @@ git 'https://github.com/FaristaS/maven-project'
 }
 {
 stage ('Compile Stage') {
-agent { label 'maven' }
+#agent { label 'maven' }
 steps {
 withMaven(maven : 'MVN-3.5') {
 sh 'mvn clean compile'
